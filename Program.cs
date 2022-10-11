@@ -22,4 +22,3 @@ while (true)
     // Call to password validator through instance
     validator.CheckPassword(desiredPassword);
 }
-
