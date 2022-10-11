@@ -11,12 +11,15 @@ Console.Clear();
 // Create instance of validator class
 PasswordValidator validator = new PasswordValidator();
 
-// Gather user input
-Console.Write("Please enter your desired password: ");
-string? desiredPassword = Console.ReadLine();
+while (true)
+{
+    // Gather user input
+    Console.Write("Please enter your desired password: ");
+    string? desiredPassword = Console.ReadLine();
+    
+    if (desiredPassword == "exit") break; // Stop app via command line if desired
 
-// Call to password validator through instance
-validator.CheckPassword(desiredPassword);
+    // Call to password validator through instance
+    validator.CheckPassword(desiredPassword);
+}
 
-// Receive response from PasswordValidator class
-// Do it all again
